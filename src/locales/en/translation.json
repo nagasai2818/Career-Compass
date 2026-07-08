@@ -1,0 +1,333 @@
+{
+  "common": {
+    "appName": "The Sanctuary",
+    "footer": "Built with care for women returning to work",
+    "your_name": "Your Name"
+  },
+  "nav": {
+    "home": "Home",
+    "jobs": "Jobs",
+    "courses": "Courses",
+    "learning": "Learning",
+    "profile": "Profile"
+  },
+  "landing": {
+    "hero": {
+      "title_main": "Your Career Break is",
+      "title_accent": "Your Superpower",
+      "subtitle": "AI-powered platform designed to help women restart their careers with confidence. Discover opportunities tailored to your unique journey.",
+      "get_started": "Get Started",
+      "sign_in": "Sign In",
+      "stats": "<0>5,000+ women</0> reclaiming their careers today"
+    },
+    "features": {
+      "title": "Everything you need to",
+      "subtitle": "restart with confidence",
+      "resume": {
+        "title": "Smart Resume Analysis",
+        "desc": "AI-powered resume review that highlights your transferable skills and career gap strengths."
+      },
+      "bridge": {
+        "title": "Skill Bridge Courses",
+        "desc": "Curated upskilling paths to fill gaps and stay competitive in today's job market."
+      },
+      "returnship": {
+        "title": "Returnship Programs",
+        "desc": "Access exclusive returnship and re-entry programs from companies that value your experience."
+      }
+    },
+    "cta": {
+      "title": "Ready to Restart?",
+      "subtitle": "Join thousands of women who have successfully returned to their careers.",
+      "button": "Create Free Account",
+      "footer": "No credit card required"
+    },
+    "reframing": {
+      "badge": "Reframing the narrative",
+      "title": "A Career Break Isn't a <1>Step Back</1>.",
+      "description": "Whether you took time for family, education, or personal growth, your skills didn't disappear. You gained emotional intelligence, resilience, and perspective.<br /><br /><strong>The Sanctuary</strong> uses Gemini AI to help you translate these life experiences into professional strengths that top Indian companies are actively looking for.",
+      "intent": "of women intend to return to work",
+      "retention": "higher retention for returning professionals"
+    },
+    "trust": {
+      "text": "Trusted by women across India"
+    },
+    "footer": {
+      "copyright": "© 2024 The Sanctuary. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "contact": "Contact Us"
+    }
+  },
+  "auth": {
+    "signup": {
+      "title": "Create Account",
+      "subtitle": "Start your journey back to the workforce",
+      "welcome": "Welcome!",
+      "welcome_desc": "Create your account to get started",
+      "full_name_label": "Full Name",
+      "email_label": "Email Address",
+      "password_label": "Password",
+      "button": "Create Account",
+      "have_account": "Already have an account?",
+      "login": "Sign In",
+      "errors": {
+        "passwords_mismatch": "Passwords do not match"
+      }
+    },
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to continue your journey",
+      "welcome": "Good to see you again!",
+      "welcome_desc": "Sign in to your account",
+      "email_label": "Email Address",
+      "password_label": "Password",
+      "button": "Sign In",
+      "google": "Continue with Google",
+      "or": "or",
+      "no_account": "Don't have an account?",
+      "sign_up": "Sign Up"
+    }
+  },
+  "app": {
+    "backend_error": {
+      "title": "Backend Not Configured",
+      "message": "Firebase is not set up yet. Please add your Firebase credentials to the .env file to enable authentication.",
+      "go_back": "Go Back"
+    },
+    "missing_resume": {
+      "title": "Resume Required",
+      "message": "Please upload your resume first before browsing {{type}}.",
+      "upload_first": "Upload Resume First",
+      "proceed_anyway": "Proceed Anyway"
+    }
+  },
+  "insights": {
+    "header": {
+      "badge": "AI Insights",
+      "title": "Welcome back, {{name}}",
+      "subtitle": "Personalised career readiness report",
+      "updated": "Updated just now",
+      "view_history": "View History"
+    },
+    "loading": {
+      "title": "Analysing your profile...",
+      "subtitle": "Our AI is generating personalised insights for you",
+      "readiness": "Calculating readiness score",
+      "matching": "Matching skills to opportunities",
+      "trends": "Analysing market trends",
+      "context": "Understanding your career context"
+    },
+    "skills": {
+      "title": "Your Skills",
+      "readiness_score": "Readiness Score",
+      "tap_instruction": "Tap a skill to explore jobs",
+      "find_jobs": "Find Jobs",
+      "upgrade_skills": "Upgrade Skills"
+    },
+    "strategies": {
+      "title": "Re-entry Strategies",
+      "label": "Strategy",
+      "action": "Learn More",
+      "missing_title": "Complete Your Profile",
+      "missing_subtitle": "Add your education and career preferences to unlock personalised re-entry strategies."
+    },
+    "market": {
+      "title": "Market Intelligence",
+      "subtitle": "Current trends for your skills",
+      "generated_by": "Generated by Gemini AI"
+    },
+    "toast": {
+      "title": "Upload Your Resume",
+      "message": "Get AI-powered job matches and personalised insights.",
+      "action": "Upload Now",
+      "later": "Later"
+    }
+  },
+  "resume": {
+    "header": {
+      "badge": "Resume AI",
+      "title": "Smart Resume Analysis",
+      "subtitle": "Upload your resume for AI-powered job and course matching"
+    },
+    "upload": {
+      "title": "Upload Your Resume",
+      "subtitle": "PDF, DOC or DOCX up to 10MB",
+      "select": "Select File",
+      "footer": "Your data is processed securely and never shared",
+      "uploading": "Uploading...",
+      "ready": "{{fileName}} ready for analysis"
+    },
+    "describe": {
+      "title": "Describe Your Experience",
+      "label": "Tell us about your background",
+      "footer": "The more detail you provide, the better your matches"
+    },
+    "action": {
+      "button": "Analyse My Resume",
+      "privacy": "Your resume is analysed privately and securely"
+    },
+    "loading": {
+      "title": "Analysing your resume...",
+      "subtitle": "Finding your best job and course matches"
+    },
+    "result": {
+      "title": "Analysis Complete!",
+      "jobs": {
+        "title": "{{count}} Job Matches",
+        "subtitle": "job matches found",
+        "action": "View Jobs"
+      },
+      "courses": {
+        "title": "{{count}} Courses",
+        "subtitle": "courses recommended",
+        "action": "View Courses"
+      },
+      "reanalyse": "Reanalyse"
+    },
+    "alerts": {
+      "empty": "Please upload a resume or describe your experience",
+      "invalid_file": "Please upload a valid PDF or Word document",
+      "success": "Resume uploaded successfully!",
+      "error": "Upload failed: {{message}}"
+    }
+  },
+  "jobs": {
+    "header": {
+      "badge": "Job Board",
+      "title_all": "All Opportunities",
+      "title_filtered": "Matched Jobs",
+      "subtitle": "Roles welcoming career returners"
+    },
+    "search": {
+      "placeholder": "Search jobs...",
+      "filters": "Filters"
+    },
+    "filter": {
+      "type": "Job Type",
+      "commitment": "Commitment",
+      "apply": "Apply Filters",
+      "clear": "Clear",
+      "onsite": "On-site",
+      "remote": "Remote",
+      "hybrid": "Hybrid",
+      "fulltime": "Full-time",
+      "parttime": "Part-time",
+      "internship": "Internship"
+    },
+    "card": {
+      "ai_match": "AI Match",
+      "match": "match",
+      "match_score": "{{score}}% match",
+      "apply": "Apply Now",
+      "details": "Details"
+    },
+    "empty": {
+      "title": "No jobs found",
+      "instruction": "Try adjusting your search or filters"
+    }
+  },
+  "courses": {
+    "header": {
+      "badge": "Learning Hub",
+      "title_all": "All Courses",
+      "title_filtered": "Recommended Courses",
+      "subtitle": "Upskill and bridge your career gap"
+    },
+    "search": {
+      "placeholder": "Search courses..."
+    },
+    "filter": {
+      "level": "Level",
+      "apply": "Apply Filters",
+      "clear": "Clear",
+      "beginner": "Beginner",
+      "intermediate": "Intermediate",
+      "advanced": "Advanced"
+    },
+    "card": {
+      "ai_match": "AI Match",
+      "enroll": "Enroll Now"
+    },
+    "path": {
+      "default": "General Upskilling",
+      "filtered": "Personalised Path"
+    },
+    "guidance": {
+      "title": "Your Learning Path",
+      "subtitle": "Courses selected based on your skills and goals"
+    },
+    "insight": "Enrol in these courses to boost your career readiness score.",
+    "empty": {
+      "title": "No courses found",
+      "instruction": "Try adjusting your search or filters"
+    }
+  },
+  "profile": {
+    "personal": {
+      "title": "Personal Information",
+      "name": "Full Name",
+      "phone": "Phone Number",
+      "age": "Age",
+      "linkedin": "LinkedIn URL"
+    },
+    "education": {
+      "title": "Education",
+      "no_entries": "No education entries added yet",
+      "class_of": "Class of {{year}}"
+    },
+    "courses": {
+      "title": "Specialised Courses",
+      "placeholder": "Add a course or certification..."
+    },
+    "career": {
+      "title": "Career Preferences",
+      "role": "Desired Role",
+      "mode": "Work Mode",
+      "locations": "Preferred Locations",
+      "salary": "Expected Salary",
+      "notice": "Notice Period"
+    },
+    "assets": {
+      "title": "Resume & Links",
+      "resume_label": "Resume",
+      "no_resume": "No resume uploaded yet"
+    },
+    "readiness": {
+      "title": "Career Readiness",
+      "complete_msg": "Your profile is complete and ready!",
+      "incomplete_msg": "Complete your profile to unlock full AI insights.",
+      "almost_ready": "Almost Ready!",
+      "celebration_title": "You're All Set!",
+      "celebration_subtitle": "Your profile is complete. Start exploring opportunities!",
+      "verify_next": "Verify & Next"
+    },
+    "history": {
+      "title": "Search History",
+      "no_history": "No search history yet",
+      "instruction": "Your job and course searches will appear here"
+    },
+    "status": {
+      "complete": "Complete",
+      "incomplete": "Incomplete",
+      "ready": "Ready"
+    },
+    "account": {
+      "title": "Account",
+      "message": "Signed in successfully"
+    },
+    "actions": {
+      "edit": "Edit",
+      "save": "Save Changes",
+      "cancel": "Cancel",
+      "add": "Add",
+      "logout": "Sign Out",
+      "update_resume": "Update Resume"
+    },
+    "alerts": {
+      "incomplete": "Please complete all required fields",
+      "name_required": "Name is required",
+      "save_error": "Could not save profile: {{message}}"
+    }
+  }
+}

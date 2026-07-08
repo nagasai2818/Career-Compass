@@ -13,7 +13,7 @@ coverage/
 # Scratch scripts and temporary data
 scratch/
 *.txt
-*.json
+#*.json
 !package.json
 !package-lock.json
 !tsconfig.json
