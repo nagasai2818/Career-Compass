@@ -25,7 +25,7 @@ console.log('--- Server Initialization ---');
 console.log('Gemini API Key present:', !!API_KEY);
 
 const genAI = API_KEY ? new GoogleGenAI({ apiKey: API_KEY, apiVersion: 'v1beta' }) : null;
-const DEFAULT_MODEL = "gemini-2.5-flash"; 
+const DEFAULT_MODEL = "gemini-2.5-flash";
 const MODEL_FALLBACK_LIST = ["gemini-2.5-flash", "gemini-2.0-flash", "gemini-1.5-flash", "gemini-flash-latest"];
 
 // Health check endpoint
@@ -42,7 +42,7 @@ const callGemini = async (prompt, modelName = DEFAULT_MODEL, useSearch = true, r
   if (!genAI) throw new Error("GoogleGenAI not initialized. Check your API key.");
 
   let currentModel = modelName || DEFAULT_MODEL;
-  
+
   try {
     console.log(`Calling Gemini with model: ${currentModel} (Web Search: ${useSearch}, Retry: ${retryCount})`);
 
@@ -339,72 +339,72 @@ app.post('/api/generate-jobs-by-skills', async (req, res) => {
       console.warn("AI Service Error (Jobs). Using fallback data.", modelError.message);
       data = {
         matchedJobs: [
-          { 
-            id: 'dyn1', 
-            title: `Senior ${skills[0] || 'Role'} Specialist`, 
-            company: 'TechSolutions India', 
-            location: 'Remote / Bangalore', 
-            salary: '₹12L - ₹20L', 
-            description: `Leverage your ${skills[0]} skills to drive growth.`, 
+          {
+            id: 'dyn1',
+            title: `Senior ${skills[0] || 'Role'} Specialist`,
+            company: 'TechSolutions India',
+            location: 'Remote / Bangalore',
+            salary: '₹12L - ₹20L',
+            description: `Leverage your ${skills[0]} skills to drive growth.`,
             matchScore: 92,
-            matchReason: 'Direct match for your selected skills and experience.', 
-            imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop', 
+            matchReason: 'Direct match for your selected skills and experience.',
+            imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop',
             applyUrl: `https://www.naukri.com/${skills[0] || 'jobs'}-jobs`,
             type: 'Remote',
             commitment: 'Full-time'
           },
-          { 
-            id: 'dyn2', 
-            title: `${skills[0] || 'Operations'} Lead`, 
-            company: 'GlobalServe', 
-            location: 'Mumbai / Hybrid', 
-            salary: '₹10L - ₹18L', 
-            description: `Lead teams with your expertise in ${skills[0]}.`, 
+          {
+            id: 'dyn2',
+            title: `${skills[0] || 'Operations'} Lead`,
+            company: 'GlobalServe',
+            location: 'Mumbai / Hybrid',
+            salary: '₹10L - ₹18L',
+            description: `Lead teams with your expertise in ${skills[0]}.`,
             matchScore: 85,
-            matchReason: 'Strategic fit for your skill set.', 
-            imageUrl: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2574&auto=format&fit=crop', 
+            matchReason: 'Strategic fit for your skill set.',
+            imageUrl: 'https://images.unsplash.com/photo-1521737711867-e3b97375f902?q=80&w=2574&auto=format&fit=crop',
             applyUrl: `https://www.linkedin.com/jobs/search?keywords=${skills[0] || 'Operations'}%20Lead`,
             type: 'Hybrid',
             commitment: 'Full-time'
           },
-          { 
-            id: 'dyn3', 
-            title: `Consultant - ${skills[1] || skills[0] || 'Management'}`, 
-            company: 'InsightCorp', 
-            location: 'Remote', 
-            salary: '₹15L - ₹25L', 
-            description: `Provide strategic consulting using your ${skills[1] || skills[0]} experience.`, 
+          {
+            id: 'dyn3',
+            title: `Consultant - ${skills[1] || skills[0] || 'Management'}`,
+            company: 'InsightCorp',
+            location: 'Remote',
+            salary: '₹15L - ₹25L',
+            description: `Provide strategic consulting using your ${skills[1] || skills[0]} experience.`,
             matchScore: 78,
-            matchReason: 'High demand for your specific skill profile.', 
-            imageUrl: 'https://images.unsplash.com/photo-1551288049-bbda64626dc1?q=80&w=2670&auto=format&fit=crop', 
+            matchReason: 'High demand for your specific skill profile.',
+            imageUrl: 'https://images.unsplash.com/photo-1551288049-bbda64626dc1?q=80&w=2670&auto=format&fit=crop',
             applyUrl: `https://www.indeed.com/q-${skills[1] || skills[0]}-Consultant-jobs.html`,
             type: 'Remote',
             commitment: 'Full-time'
           },
-          { 
-            id: 'dyn4', 
-            title: `Assistant Vice President - ${skills[0] || 'Business'}`, 
-            company: 'RetailPro', 
-            location: 'Gurgaon', 
-            salary: '₹22L - ₹32L', 
-            description: `Executive leadership role focusing on ${skills[0]}.`, 
+          {
+            id: 'dyn4',
+            title: `Assistant Vice President - ${skills[0] || 'Business'}`,
+            company: 'RetailPro',
+            location: 'Gurgaon',
+            salary: '₹22L - ₹32L',
+            description: `Executive leadership role focusing on ${skills[0]}.`,
             matchScore: 88,
-            matchReason: 'Your years of experience make you eligible for leadership roles.', 
-            imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop', 
+            matchReason: 'Your years of experience make you eligible for leadership roles.',
+            imageUrl: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop',
             applyUrl: `https://www.naukri.com/${skills[0] || 'business'}-leadership-jobs`,
             type: 'On-site',
             commitment: 'Full-time'
           },
-          { 
-            id: 'dyn5', 
-            title: `Freelance ${skills[0] || 'Technical'} Expert`, 
-            company: 'GigNetwork', 
-            location: 'Remote', 
-            salary: '₹5k - ₹10k / day', 
-            description: `Flexible projects for experts in ${skills[0]}.`, 
+          {
+            id: 'dyn5',
+            title: `Freelance ${skills[0] || 'Technical'} Expert`,
+            company: 'GigNetwork',
+            location: 'Remote',
+            salary: '₹5k - ₹10k / day',
+            description: `Flexible projects for experts in ${skills[0]}.`,
             matchScore: 70,
-            matchReason: 'Perfect for easing back into the workforce with flexibility.', 
-            imageUrl: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=2670&auto=format&fit=crop', 
+            matchReason: 'Perfect for easing back into the workforce with flexibility.',
+            imageUrl: 'https://images.unsplash.com/photo-1533750349088-cd871a92f312?q=80&w=2670&auto=format&fit=crop',
             applyUrl: `https://www.upwork.com/search/jobs/?q=${skills[0] || 'freelance'}`,
             type: 'Remote',
             commitment: 'Part-time'
@@ -418,15 +418,6 @@ app.post('/api/generate-jobs-by-skills', async (req, res) => {
     console.error("Critical Backend Error (Generate Jobs):", error);
     res.status(500).json({ error: "Service temporarily degraded.", message: error.message });
   }
-});
-
-// Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'dist')));
-
-// The "catchall" handler: for any request that doesn't
-// match one above, send back React's index.html file.
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
 });
 
 app.listen(port, () => {
