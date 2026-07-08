@@ -1,0 +1,289 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-headline: "Manrope", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  --color-primary: #00464a;
+  --color-on-primary: #ffffff;
+  --color-primary-container: #006064;
+  --color-on-primary-container: #8fd8dc;
+  --color-primary-fixed: #a6eff3;
+  --color-on-primary-fixed: #002021;
+  --color-primary-fixed-dim: #8ad3d7;
+  --color-on-primary-fixed-variant: #004f53;
+
+  --color-secondary: #6f48b2;
+  --color-on-secondary: #ffffff;
+  --color-secondary-container: #b78efe;
+  --color-on-secondary-container: #491d8a;
+  --color-secondary-fixed: #ebdcff;
+  --color-on-secondary-fixed: #260058;
+  --color-secondary-fixed-dim: #d4bbff;
+  --color-on-secondary-fixed-variant: #572e99;
+
+  --color-tertiary: #672e1c;
+  --color-on-tertiary: #ffffff;
+  --color-tertiary-container: #834531;
+  --color-on-tertiary-container: #ffbca8;
+  --color-tertiary-fixed: #ffdbd0;
+  --color-on-tertiary-fixed: #390c01;
+  --color-tertiary-fixed-dim: #ffb59e;
+  --color-on-tertiary-fixed-variant: #713623;
+
+  --color-background: #f8f9fa;
+  --color-on-background: #191c1d;
+  --color-surface: #f8f9fa;
+  --color-on-surface: #191c1d;
+  --color-surface-variant: #e1e3e4;
+  --color-on-surface-variant: #3f4949;
+  --color-surface-bright: #f8f9fa;
+  --color-surface-dim: #d9dadb;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f3f4f5;
+  --color-surface-container: #edeeef;
+  --color-surface-container-high: #e7e8e9;
+  --color-surface-container-highest: #e1e3e4;
+
+  --color-outline: #6f7979;
+  --color-outline-variant: #bec8c9;
+  --color-inverse-surface: #2e3132;
+  --color-inverse-on-surface: #f0f1f2;
+  --color-inverse-primary: #8ad3d7;
+
+  --color-error: #ba1a1a;
+  --color-on-error: #ffffff;
+  --color-error-container: #ffdad6;
+  --color-on-error-container: #93000a;
+
+  --color-scrim: #000000;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-on-background font-body;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* ========================
+   Custom Shapes
+   ======================== */
+.asymmetric-shape {
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+}
+
+.tonal-shift {
+  background: linear-gradient(180deg, rgba(243, 244, 245, 1) 0%, rgba(248, 249, 250, 1) 100%);
+}
+
+/* ========================
+   Glass Morphism
+   ======================== */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(0, 70, 74, 0.1);
+}
+
+.glass-dark {
+  background: rgba(0, 70, 74, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(166, 239, 243, 0.2);
+}
+
+/* ========================
+   Gradient Backgrounds
+   ======================== */
+.bg-gradient-premium {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-container) 100%);
+}
+
+.bg-gradient-radial-primary {
+  background: radial-gradient(ellipse at top center, rgba(0, 70, 74, 0.08) 0%, transparent 70%);
+}
+
+/* ========================
+   Float Animations
+   ======================== */
+@keyframes float-slow {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes float-medium {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(1deg); }
+}
+
+.animate-float-slow {
+  animation: float-slow 4s ease-in-out infinite;
+}
+
+.animate-float-medium {
+  animation: float-medium 3s ease-in-out infinite;
+}
+
+/* ========================
+   Shimmer Effect
+   ======================== */
+@keyframes shimmer {
+  0% { background-position: -1000px 0; }
+  100% { background-position: 1000px 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.4) 50%, transparent 100%);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* ========================
+   Gradient Text
+   ======================== */
+.text-gradient-primary {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ========================
+   Pulse Ring Effect
+   ======================== */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 1; }
+  100% { transform: scale(2); opacity: 0; }
+}
+
+.animate-pulse-ring::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 2px solid currentColor;
+  animation: pulse-ring 1.5s ease-out infinite;
+}
+
+/* ========================
+   Slide Up Animation
+   ======================== */
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.5s ease-out forwards;
+}
+
+/* ========================
+   Card Hover Glow
+   ======================== */
+.card-hover-glow {
+  transition: all 0.3s ease;
+}
+
+.card-hover-glow:hover {
+  box-shadow: 0 20px 60px -10px rgba(0, 70, 74, 0.2), 0 0 0 1px rgba(0, 70, 74, 0.05);
+  transform: translateY(-4px);
+}
+
+/* ========================
+   Gradient Border
+   ======================== */
+.gradient-border {
+  position: relative;
+  background: white;
+}
+
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, var(--color-primary-fixed) 0%, var(--color-secondary-fixed) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: destination-out;
+  mask-composite: exclude;
+}
+
+/* ========================
+   Scrollbar Styling
+   ======================== */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 70, 74, 0.2);
+  border-radius: 100px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 70, 74, 0.4);
+}
+
+/* ========================
+   Focus Styles
+   ======================== */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ========================
+   Selection Color
+   ======================== */
+::selection {
+  background: rgba(0, 70, 74, 0.15);
+  color: var(--color-primary);
+}
+
+/* ========================
+   Typing Animation
+   ======================== */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ========================
+   Counter Animation
+   ======================== */
+@keyframes count-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-count-up {
+  animation: count-up 0.6s ease-out forwards;
+}
+
+/* ========================
+   Safe Area Support
+   ======================== */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 16px);
+}

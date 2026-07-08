@@ -1,0 +1,27 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+!.env.example
+
+# Zips and Deployments
+*.zip
+
+# Scratch scripts and temporary data
+scratch/
+*.txt
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!*.schema.json
+*.js
+!*.config.js
+!*.config.cjs
+!vite.config.ts
+!server.js
+*.cjs
+!*.config.cjs
